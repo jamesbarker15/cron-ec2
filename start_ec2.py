@@ -9,7 +9,7 @@ client = WebClient(token=SLACK_BOT_TOKEN)
 def lambda_handler(event, context):
     ec2 = boto3.client('ec2')
 
-    # Identify instances with Dev Tags and are running
+    # Identify instances with Dev Tags and are stopped
     instances = ec2.describe_instances(Filters=[
         {'Name': 'tag:Environment', 'Values': ['Development']},
         {'Name': 'instance-state-name', 'Values': ['stopped']}])
