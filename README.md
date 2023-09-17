@@ -15,3 +15,5 @@ The start script can then be run at 08:00hrs to bring back the instances for exa
 Each instance which is started or stopped, a Slack notification is sent with the 
 instance ID. 
 
+Requirements.zip has been added for easy upload to Lambda Layers. 
+
